@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <% include ./partials/head %>
+  </head>
+  <body>
+    <% include ./partials/header %>
+    <div class="container">
+      <h2>Inserir nova tarefa</h2>
+      <div class="row">
+        <form method="post" >
+          <p>Tarefa</p>
+          <input name="text" value="<%= task.text %>" >
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  </body>
+
+</html>

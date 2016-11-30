@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <% include ./partials/header %>
+    <div class="container">
+      <h1>Lista de Tarefas</h1>
+
+      <table class="bordered">
+          <tr><th >Tarefa</th>
+              <th class="right">Ações</th></tr>
+        <% tasks.forEach(function(task){ %>
+            <tr><td><%= task.text %> </td>
+                <td class="right">
+                  <a href="tasks/update/<%= task.id %>"><i class="material-icons">mode_edit</i></a>
+                  <a href="tasks/delete/<%= task.id %>"><i class="material-icons">delete</i></a>
+                </td>
+            </tr>
+        <% }); %>
+      </table>
+
+      <p><a class="waves-effect waves-light btn" href="tasks/new"><i class="material-icons right">add</i>Adicionar task</a></p>
+    </div>
+  </body>
+
+
+</html>
